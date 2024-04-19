@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:text="Hello World!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text=" runOnUiThread (в runn1): Гарантирует выполнение кода в основном потоке UI \n
+\n
+post (в runn2): Добавляет код в очередь выполнения основного потока UI без задержки \n
+\n
+postDelayed (в runn3):
+Добавляет код в очередь выполнения основного потока UI с заданной задержкой \n
+\n
+\n
+Последовательность запуска: runn1, runn2, runn3 \n
+\n
+\n
+(2-х секундная задержка) \n
+runOnUiThread: запуск runn1 \n
+(1 секундная задержа) \n
+(postDelayed: runn3 выполнится через 2 c.) \n
+post: runn2 выполняется сразу \n
+postDelayed: задержка проходит и выполняется runn3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
